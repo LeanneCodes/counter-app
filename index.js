@@ -1,6 +1,8 @@
 let add = document.getElementById('increment-btn');
 let subtract = document.getElementById('decrement-btn');
 let counter = document.getElementById('count-num');
+let save = document.getElementById('save-btn');
+let tracker = document.getElementById('tracker');
 
 let count = 0;
 
@@ -22,3 +24,12 @@ function decrease() {
         counter.innerText = count;
     }
 };
+
+save.addEventListener('click', saveCount);
+
+function saveCount() {
+    countTracker = count + ', ';
+    tracker.textContent += countTracker;
+    counter.textContent = 0;
+    count = 0;
+}
