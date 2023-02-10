@@ -3,6 +3,7 @@ let subtract = document.getElementById('decrement-btn');
 let counter = document.getElementById('count-num');
 let save = document.getElementById('save-btn');
 let tracker = document.getElementById('tracker');
+let total = document.getElementById("total")
 
 let count = 0;
 
@@ -28,8 +29,14 @@ function decrease() {
 save.addEventListener('click', saveCount);
 
 function saveCount() {
-    countTracker = count + ', ';
-    tracker.textContent += countTracker;
+    let countStr = count + '...';
+    tracker.textContent += countStr;
+
+    let prevCount = total.textContent ? parseInt(total.textContent) : 0;
+    console.log(prevCount);
+    total.textContent = count + prevCount;
+    console.log(total.textContent);
+
     counter.textContent = 0;
     count = 0;
 }
