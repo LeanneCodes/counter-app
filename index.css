@@ -45,7 +45,7 @@ button {
     background: darkblue;
 }
 
-#save-btn {
+#save-btn, #reset {
     background: darkgreen;
     margin-top: 1rem;
     width: 405px;
@@ -53,3 +53,6 @@ button {
     padding-bottom: 10px;
 }
 
+#reset {
+    background: orangered;
+}
